@@ -1,0 +1,15 @@
+{
+  // `til` + Tab으로 스니펫이 펼쳐지게 한다. 기본값이 off라 켜야 한다.
+  "editor.tabCompletion": "on",
+  "[markdown]": {
+    // 마크다운은 자동완성 팝업이 기본으로 꺼져 있다. 켜야 til 입력 중에 목록이 뜬다.
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    // 문서에 이미 있는 단어를 제안하는 기능. 스니펫 목록을 가려서 끈다.
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.showWords": false
+  }
+}

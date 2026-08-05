@@ -1,0 +1,65 @@
+{
+  // ${n:...}은 placeholder — 힌트 문구가 선택된 채로 삽입되므로 그대로 타이핑하면 덮어써진다.
+  // ${n|a,b,c|}는 choice — 드롭다운이 뜬다. $0은 스니펫을 빠져나올 때 커서가 놓이는 자리.
+  "TIL entry": {
+    "scope": "markdown",
+    "prefix": "til",
+    "description": "TIL 항목 (카테고리 + 제목 + 태그 줄 + 본문)",
+    "body": [
+      "### [${1|ML,PYTHON,SQL,LEETCODE,INFRA,ETC|}] ${2:제목}",
+      "#${3:tag}",
+      "",
+      "- ${4:배운 것}$0"
+    ]
+  },
+  "TIL entry (review)": {
+    "scope": "markdown",
+    "prefix": "tilr",
+    "description": "TIL 항목 + 제목 끝에 #review 마커",
+    "body": [
+      "### [${1|ML,PYTHON,SQL,LEETCODE,INFRA,ETC|}] ${2:제목} #review",
+      "#${3:tag}",
+      "",
+      "- ${4:배운 것}",
+      "- ${5:아직 헷갈리는 부분}$0"
+    ]
+  },
+  "TIL leetcode entry": {
+    "scope": "markdown",
+    "prefix": "tille",
+    "description": "리트코드 항목 (번호. 문제명 + 접근 + 복잡도 + 코드)",
+    "body": [
+      "### [LEETCODE] ${1:번호}. ${2:문제명}",
+      "#${3:tag}",
+      "",
+      "- ${4:핵심 아이디어}",
+      "- 시간 ${5:O(?)} / 공간 ${6:O(?)}",
+      "",
+      "```python",
+      "${7:# 풀이}",
+      "```",
+      "$0"
+    ]
+  },
+  "TIL day heading": {
+    "scope": "markdown",
+    "prefix": "tilday",
+    "description": "오늘 날짜 헤더",
+    "body": [
+      "## ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "",
+      "$0"
+    ]
+  },
+  "TIL code block": {
+    "scope": "markdown",
+    "prefix": "tilcode",
+    "description": "코드 블록 (언어 선택)",
+    "body": [
+      "```${1|python,sql,bash,text|}",
+      "${2:code}",
+      "```",
+      "$0"
+    ]
+  }
+}
