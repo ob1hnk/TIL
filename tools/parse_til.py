@@ -10,7 +10,7 @@
     python tools/parse_til.py                  # 전체를 JSONL로 출력
     python tools/parse_til.py --lint           # 형식 위반만 검사
     python tools/parse_til.py --tag review     # #review 붙은 항목만
-    python tools/parse_til.py --category DL    # DL 항목만
+    python tools/parse_til.py --category DSA   # DSA 항목만
     python tools/parse_til.py --stats          # 카테고리/태그 집계
     python tools/parse_til.py --new 2026-09    # 새 월 파일 생성
 """
@@ -27,7 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 # meta/categories.md의 닫힌 목록과 같아야 한다.
-CATEGORIES = ["ML", "PYTHON", "SQL", "LEETCODE", "INFRA", "ETC"]
+CATEGORIES = ["ML", "STAT", "PYTHON", "SQL", "DSA", "INFRA", "ETC"]
 MARKERS = {"review", "todo"}
 
 MONTH_FILE = re.compile(r"^\d{4}-\d{2}\.md$")

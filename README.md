@@ -20,8 +20,8 @@ TIL/
 **1. 날짜는 `## YYYY-MM-DD`** — 하루에 하나. 그날 아무것도 안 배웠으면 날짜 자체를 안 쓴다.
 빈 날짜 헤더를 남겨두지 않는다.
 
-**2. 항목은 `### [카테고리] 제목`** — 대괄호 안은 `ML` `PYTHON` `SQL` `LEETCODE` `INFRA` `ETC`
-6개만. 정의와 경계 판단 기준은 [meta/categories.md](meta/categories.md)에 있다.
+**2. 항목은 `### [카테고리] 제목`** — 대괄호 안은 `ML` `STAT` `PYTHON` `SQL` `DSA` `INFRA` `ETC`
+7개만. 정의와 경계 판단 기준은 [meta/categories.md](meta/categories.md)에 있다.
 카테고리를 자유롭게 늘리면 나중에 집계가 안 된다.
 
 **3. 태그는 제목 바로 다음 줄에 `#태그` 한 줄** — 영문 소문자, 숫자, 하이픈만 쓴다 (`#time-series`).
@@ -65,10 +65,10 @@ df.groupby('cat')['val'].agg(['mean', 'count'])
 
 ## 2026-08-06
 
-### [LEETCODE] 121. Best Time to Buy and Sell Stock
-#array #greedy
+### [DSA] 42586. 기능개발
+#queue #simulation
 
-- 최소값을 갱신하며 한 번만 순회하면 O(n)
+- 앞 작업이 끝나야 배포되므로 큐를 앞에서부터 훑으며 최대 진행률을 들고 간다
 
 ### [SQL] 윈도우 함수로 그룹별 순위
 #window-function #rank
@@ -97,7 +97,7 @@ VS Code에서 **TIL 폴더를 워크스페이스 루트로 열어야** 스니펫
 | `tilday` + Tab | 오늘 날짜 헤더 (`## 2026-08-05`, 날짜 자동) |
 | `til` + Tab | 일반 항목 |
 | `tilr` + Tab | 제목에 `#review`가 붙은 항목 |
-| `tille` + Tab | 리트코드 항목 (번호·문제명 + 복잡도 + 코드 블록) |
+| `tildsa` + Tab | 코테 항목 (번호·문제명 + 복잡도 + 코드 블록) |
 | `tilcode` + Tab | 코드 블록만 (python/sql/bash/text 선택) |
 
 `til` + Tab을 누르면 아래가 통째로 삽입되고, 커서는 `[ML]` 자리에 있다.
@@ -121,7 +121,7 @@ VS Code에서 **TIL 폴더를 워크스페이스 루트로 열어야** 스니펫
 
 `⇧Tab`으로 이전 칸에 돌아갈 수 있다. `Esc`를 누르면 칸 이동이 끊기니 다 채울 때까지 누르지 않는다.
 placeholder를 그대로 두고 나오면 `- 배운 것` 같은 문구가 파일에 남으니, 안 쓸 칸은 지운다.
-`tille`의 `O(?)`는 일부러 눈에 띄게 둔 것이라 안 채우면 바로 보인다.
+`tildsa`의 `O(?)`는 일부러 눈에 띄게 둔 것이라 안 채우면 바로 보인다.
 
 동작하지 않으면:
 
@@ -147,7 +147,7 @@ placeholder를 그대로 두고 나오면 `- 배운 것` 같은 문구가 파일
 python3 tools/parse_til.py                      # 전체를 JSONL로 출력
 python3 tools/parse_til.py --lint               # 형식 위반만 검사 (error 있으면 exit 1)
 python3 tools/parse_til.py --tag review         # #review 붙은 항목만
-python3 tools/parse_til.py --category LEETCODE  # 리트코드 항목만
+python3 tools/parse_til.py --category DSA       # 코테 항목만
 python3 tools/parse_til.py --stats              # 카테고리/태그 집계
 ```
 

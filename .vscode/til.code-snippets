@@ -6,7 +6,7 @@
     "prefix": "til",
     "description": "TIL 항목 (카테고리 + 제목 + 태그 줄 + 본문)",
     "body": [
-      "### [${1|ML,PYTHON,SQL,LEETCODE,INFRA,ETC|}] ${2:제목}",
+      "### [${1|ML,STAT,PYTHON,SQL,DSA,INFRA,ETC|}] ${2:제목}",
       "#${3:tag}",
       "",
       "- ${4:배운 것}$0"
@@ -17,19 +17,19 @@
     "prefix": "tilr",
     "description": "TIL 항목 + 제목 끝에 #review 마커",
     "body": [
-      "### [${1|ML,PYTHON,SQL,LEETCODE,INFRA,ETC|}] ${2:제목} #review",
+      "### [${1|ML,STAT,PYTHON,SQL,DSA,INFRA,ETC|}] ${2:제목} #review",
       "#${3:tag}",
       "",
       "- ${4:배운 것}",
       "- ${5:아직 헷갈리는 부분}$0"
     ]
   },
-  "TIL leetcode entry": {
+  "TIL DSA entry": {
     "scope": "markdown",
-    "prefix": "tille",
-    "description": "리트코드 항목 (번호. 문제명 + 접근 + 복잡도 + 코드)",
+    "prefix": "tildsa",
+    "description": "코테 항목 (프로그래머스 번호. 문제명 + 접근 + 복잡도 + 코드)",
     "body": [
-      "### [LEETCODE] ${1:번호}. ${2:문제명}",
+      "### [DSA] ${1:번호}. ${2:문제명}",
       "#${3:tag}",
       "",
       "- ${4:핵심 아이디어}",
