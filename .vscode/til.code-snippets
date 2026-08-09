@@ -27,16 +27,16 @@
   "TIL DSA entry": {
     "scope": "markdown",
     "prefix": "tildsa",
-    "description": "코테 항목 (프로그래머스 번호. 문제명 + 접근 + 복잡도 + 코드)",
+    "description": "코테 항목 (문제명 + 레벨·정답률 + 자료구조/유형 태그 + 복잡도 + 코드)",
     "body": [
-      "### [DSA] ${1:번호}. ${2:문제명}",
-      "#${3:tag}",
+      "### [DSA] ${1:문제명} (Lv.${2|0,1,2,3,4,5|}, 정답률 ${3:00}%)",
+      "#${4|array,string,hash,dict,set,stack,queue,deque,heap,linked-list,tree,graph,matrix,trie,union-find|} #${5|simulation,implementation,greedy,dp,bfs,dfs,binary-search,two-pointer,sliding-window,sorting,backtracking,recursion,math,bitmask,string-parsing|}",
       "",
-      "- ${4:핵심 아이디어}",
-      "- 시간 ${5:O(?)} / 공간 ${6:O(?)}",
+      "- ${6:핵심 아이디어}",
+      "- 시간 ${7:O(?)} / 공간 ${8:O(?)}",
       "",
       "```python",
-      "${7:# 풀이}",
+      "${9:# 풀이}",
       "```",
       "$0"
     ]
